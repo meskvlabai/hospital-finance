@@ -321,14 +321,15 @@ export default function LoginPage() {
               </div>
 
               {/* رابط نسيت كلمة المرور */}
-              <div className="text-start">
+              <div className="flex flex-wrap justify-between gap-3">
+                <a href="/forgot-password" className="text-xs font-semibold text-[var(--color-primary)] hover:underline">نسيت كلمة المرور؟</a>
                 <button
                   type="button"
                   onClick={() => setShowSupportModal(true)}
                   className="text-xs font-semibold text-[var(--color-primary)] hover:underline"
                   style={{ background: 'none', border: 'none', cursor: 'pointer', padding: 0 }}
                 >
-                  نسيت كلمة المرور؟
+                  التواصل مع الدعم
                 </button>
               </div>
 
@@ -385,7 +386,7 @@ export default function LoginPage() {
                 إعادة تعيين كلمة المرور
               </h3>
               <p className="text-xs text-[var(--color-muted)] mb-4 leading-relaxed">
-                لأسباب أمنية ولوائح الحوكمة المالية، يرجى التواصل مع الدعم الفني للمكتب الفني لإعادة تعيين الحساب.
+                إذا لم يعد بإمكانك الوصول إلى بريد حسابك، تواصل مع الدعم الفني للتحقق من هويتك واستعادة الوصول.
               </p>
               <div
                 className="rounded-xl p-3.5 mb-4 border border-blue-200"
