@@ -2,6 +2,9 @@ import { NextResponse, type NextRequest } from 'next/server'
 import { createServerClient } from '@supabase/ssr'
 
 export async function proxy(request: NextRequest) {
+  if (['/forgot-password', '/auth/callback'].includes(request.nextUrl.pathname)) {
+    return NextResponse.next({ request })
+  }
   let supabaseResponse = NextResponse.next({ request })
 
   const supabase = createServerClient(
